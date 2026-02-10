@@ -3,6 +3,7 @@ use std::path::PathBuf;
 use ::xcap::Monitor;
 use chrono::Local;
 use std::process::Command;
+use std::path::Path;
 
 fn monitor_data() -> (Monitor, (u32, u32)) {
 
@@ -36,7 +37,9 @@ pub fn fullscreen_shot() {
     file_path.push(filename);
 
     image.save(&file_path).unwrap();
+    clipboard_copy(&file_path);
     println!("Screenshot saved to: {}", file_path.display());
+    println!("Screenshot copied to clipboard");
 
 }
 
@@ -75,5 +78,17 @@ pub fn region_screenshot() {
     file_path.push(filename);
 
     image.save(&file_path).unwrap();
+    clipboard_copy(&file_path);
     println!("Screenshot saved to: {}", file_path.display());
+    println!("Screenshot copied to clipboard");
+}
+
+pub fn clipboard_copy(file_path: &Path) {
+    Command::new("wl-copy")
+                                .args(["--type", "image/png"])
+                                .stdin(std::process::Stdio::from(
+                                    std::fs::File::open(file_path).unwrap(),
+                                ))
+                                .spawn()
+                                .expect("error wl-copy");
 }
