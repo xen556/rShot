@@ -18,7 +18,7 @@ fn monitor_data() -> (Monitor, (u32, u32)) {
 
 pub fn fullscreen_shot() {
     let date = Local::now();
-    let datetime = date.format("%Y-%m-%d").to_string();
+    let datetime = date.format("%Y-%m-%d %H:%M:%S").to_string();
 
     let (monitor, (w, h)) = monitor_data();
 
@@ -35,5 +35,6 @@ pub fn fullscreen_shot() {
     file_path.push(filename);
 
     image.save(&file_path).unwrap();
+    println!("Screenshot saved to: {}", file_path.display());
 
 }
