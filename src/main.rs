@@ -1,5 +1,6 @@
 use clap::Parser;
 mod xcap;
+mod region_selector;
 
 fn main() {
     let args = Args::parse();
@@ -9,6 +10,9 @@ fn main() {
     }
     else if args.area {
         xcap::region_screenshot();
+    }
+    else if args.test {
+        region_selector::test();
     }
     else {
         println!("Invalid flag")
@@ -22,4 +26,7 @@ struct Args {
 
     #[arg(long)]
     fullscreen: bool,
+
+    #[arg(long)]
+    test: bool,
 }
