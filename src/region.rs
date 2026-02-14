@@ -22,10 +22,6 @@ pub fn select_region() -> (u32, u32, u32, u32) {
 
 #[cfg(any(target_os = "windows", target_os = "macos"))]
 pub fn select_region() -> (u32, u32, u32, u32) {
-    let width = 1920;
-    let height = 1080;
-    let x = 0;
-    let y = 0;
 
-    (x, y, width, height)
+    (0, 0, 0, 0)
 }

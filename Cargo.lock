@@ -2573,10 +2573,10 @@ dependencies = [
  "derive",
  "dirs",
  "eframe",
- "egui",
  "fs_extra",
  "image",
  "rdev",
+ "winit",
  "xcap",
 ]
 
