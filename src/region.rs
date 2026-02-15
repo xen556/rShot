@@ -19,9 +19,3 @@ pub fn select_region() -> (u32, u32, u32, u32) {
 
     (x, y, width, height)
 }
-
-#[cfg(any(target_os = "windows", target_os = "macos"))]
-pub fn select_region() -> (u32, u32, u32, u32) {
-
-    (0, 0, 0, 0)
-}
