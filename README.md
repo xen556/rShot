@@ -1,4 +1,4 @@
-# myshot
+# rShot
 
 **myshot** is a lightweight and fast tool for selecting a screen area and taking screenshots on Linux.
 **Requires [`slurp`](https://github.com/emersion/slurp) to select a screen region.**
@@ -19,13 +19,13 @@ The program comes as a precompiled binary; no compilation is needed.
 Download the precompiled binary and place it in a directory in your `PATH`, or run it directly:
 
 ```bash
-./myshot --help
+./rshot --help
 ```
 
 To make it available system-wide:
 
 ```bash
-sudo cp myshot /usr/local/bin/
+sudo cp rshot /usr/local/bin/
 ```
 
 ---
@@ -53,13 +53,13 @@ nix-env -iA nixpkgs.slurp
 ## Usage
 
 ```bash
-./myshot --help
+./rshot --help
 ```
 
 Output:
 
 ```
-Usage: myshot [OPTIONS]
+Usage: rshot [OPTIONS]
 
 Options:
       --area        Select a specific area of the screen (requires slurp)
@@ -72,13 +72,13 @@ Options:
 Capture a specific area:
 
 ```bash
-./myshot --area
+./rshot --area
 ```
 
 Capture the full screen:
 
 ```bash
-./myshot --fullscreen
+./rshot --fullscreen
 ```
 
 ---
