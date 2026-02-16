@@ -1,6 +1,6 @@
 # rShot
 
-**myshot** is a lightweight and fast tool for selecting a screen area and taking screenshots on Linux.
+**rshot** is a lightweight and fast tool for selecting a screen area and taking screenshots on Linux.
 **Requires [`slurp`](https://github.com/emersion/slurp) to select a screen region.**
 The program comes as a precompiled binary; no compilation is needed.
 
