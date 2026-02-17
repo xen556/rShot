@@ -1,7 +1,12 @@
 # rShot
 
-**rshot** is a lightweight and fast tool for selecting a screen area and taking screenshots on Linux.
-**Requires [`slurp`](https://github.com/emersion/slurp) to select a screen region.**
+**rShot** is a lightweight and fast tool for taking screenshots on Linux, either fullscreen or from a selected screen area.
+
+**Requires:**  
+
+* [`slurp`](https://github.com/emersion/slurp) – to select a screen region  
+* [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard) – to copy screenshots to the system clipboard on Wayland  
+
 The program comes as a precompiled binary; no compilation is needed.
 
 ---
@@ -10,6 +15,7 @@ The program comes as a precompiled binary; no compilation is needed.
 
 * Select a specific area of the screen (`--area`) using `slurp`
 * Capture the entire screen (`--fullscreen`)
+* Automatically copy screenshots to the system clipboard (requires `wl-copy`)
 * Simple and minimal interface
 
 ---
@@ -20,32 +26,28 @@ Download the precompiled binary and place it in a directory in your `PATH`, or r
 
 ```bash
 ./rshot --help
-```
-
-To make it available system-wide:
-
-```bash
-sudo cp rshot /usr/local/bin/
-```
 
 ---
 
 ## Requirements
 
-* Linux with a graphical environment
+* Linux with a graphical environment(Wayland)
 * [`slurp`](https://github.com/emersion/slurp) installed
+* wl-clipboard installed
+
+---
 
 Install `slurp` on common Linux systems:
 
 ```bash
 # Debian/Ubuntu
-sudo apt install slurp
+sudo apt install slurp wl-clipboard
 
 # Arch/Manjaro
-sudo pacman -S slurp
+sudo pacman -S slurp wl-clipboard
 
 # NixOS
-nix-env -iA nixpkgs.slurp
+nix-env -iA nixpkgs.slurp nixpkgs.wl-clipboard
 ```
 
 ---
@@ -80,12 +82,5 @@ Capture the full screen:
 ```bash
 ./rshot --fullscreen
 ```
-
----
-
-## Notes
-
-* No compilation is required; the binary is ready to use.
-* Future versions may add support for macOS and Windows.
 
 ---
