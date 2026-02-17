@@ -2494,21 +2494,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rshot"
-version = "0.1.0"
-dependencies = [
- "arboard",
- "chrono",
- "clap",
- "derive",
- "dirs",
- "eframe",
- "fs_extra",
- "image",
- "xcap",
-]
-
-[[package]]
 name = "naga"
 version = "27.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3694,6 +3679,21 @@ name = "rgb"
 version = "0.8.52"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c6a884d2998352bb4daf0183589aec883f16a6da1f4dde84d8e2e9a5409a1ce"
+
+[[package]]
+name = "rshot"
+version = "0.1.0"
+dependencies = [
+ "arboard",
+ "chrono",
+ "clap",
+ "derive",
+ "dirs",
+ "eframe",
+ "fs_extra",
+ "image",
+ "xcap",
+]
 
 [[package]]
 name = "rustc-hash"
