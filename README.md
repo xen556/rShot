@@ -22,10 +22,7 @@
 
 Download the precompiled binary and place it in a directory in your `PATH`, or run it directly:
 
-```bash
-./rshot --help
-
----
+--- 
 
 ## Requirements
 
@@ -33,7 +30,7 @@ Download the precompiled binary and place it in a directory in your `PATH`, or r
 * [`slurp`](https://github.com/emersion/slurp) installed
 * wl-clipboard installed
 
----
+--- 
 
 Install `slurp` on common Linux systems:
 
