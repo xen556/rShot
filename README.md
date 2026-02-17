@@ -7,8 +7,6 @@
 * [`slurp`](https://github.com/emersion/slurp) – to select a screen region  
 * [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard) – to copy screenshots to the system clipboard on Wayland  
 
-The program comes as a precompiled binary; no compilation is needed.
-
 ---
 
 ## Features
